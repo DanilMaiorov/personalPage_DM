@@ -9,11 +9,29 @@ $mainFont: 'Nunito', sans-serif;
 body {
   font-family: $mainFont;
   font-weight: 400;
-  color: #fff;
   height: 100%;
+}
+main {
+  flex: 1;
+  padding-top: 7rem;
 }
 a {
   font-weight: 700;
+}
+hr {
+  background-color: rgba(0, 0, 0, 0.2);
+  height: 0.1rem;
+}
+button {
+  font-size: 4rem;
+  font-family: $mainFont;
+  padding: 0.25em 1em;
+  border-radius: 0.1em;
+  background-color: #619b9b;
+  color: #fff;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  cursor: pointer;
 }
 /*Ограничивающий контейнер*/
 .wrapper {
@@ -28,9 +46,16 @@ a {
   margin: 0 auto;
   outline: 1px solid red;
 }
+.title {
+  font-size: 4.4rem;
+  font-weight: 700;
+}
 
 @import './normalize.scss';
 @import './header.scss';
+@import './hello.scss';
+@import './portfolio.scss';
+
 @import './main.scss';
 @import './footer.scss';
 @import './blocks/burger.scss';
