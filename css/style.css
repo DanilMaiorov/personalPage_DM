@@ -1,0 +1,353 @@
+@charset "UTF-8";
+/*Подключение шрифтов*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;700&display=swap");
+/*Стили body*/
+body {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  color: #fff;
+  height: 100%; }
+
+a {
+  font-weight: 700; }
+
+/*Ограничивающий контейнер*/
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%; }
+
+.container {
+  max-width: 141rem;
+  padding: 0 1.5rem;
+  width: 100%;
+  margin: 0 auto;
+  outline: 1px solid red; }
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box; }
+
+html {
+  height: 100%;
+  line-height: 1;
+  -webkit-text-size-adjust: 100%;
+  font-size: 62.5%; }
+
+body {
+  margin: 0; }
+
+a {
+  text-decoration: none;
+  cursor: pointer; }
+
+ul {
+  list-style: none; }
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  overflow: hidden; }
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #619b9b;
+  z-index: 2; }
+
+.header__inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 7rem; }
+
+.logo {
+  font-size: 3.6rem;
+  font-weight: 700;
+  z-index: 3;
+  position: relative; }
+
+.logo__link {
+  position: absolute;
+  transform: translateY(-50%);
+  display: inline-block; }
+
+.logo__link-span {
+  display: inline-flex;
+  position: absolute;
+  transform: translateY(-50%); }
+
+.letter {
+  display: inline-block;
+  position: relative;
+  transform: translateZ(25px);
+  transform-origin: 50% 50% 25px; }
+
+.letter.out {
+  transform: rotateX(90deg);
+  transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+
+.letter.behind {
+  transform: rotateX(-90deg); }
+
+.letter.in {
+  transform: rotateX(0deg);
+  transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+
+.logo__link--span {
+  color: white; }
+
+.header__list {
+  display: flex;
+  gap: 40px;
+  position: relative;
+  z-index: 2; }
+
+.header__list-item {
+  padding: 2rem 0;
+  font-size: 2.4rem; }
+
+.header__link {
+  padding: 1rem;
+  position: relative;
+  color: #000; }
+
+.header__link:last-child {
+  margin-right: -1rem; }
+
+/* @import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+}
+
+.text {
+  position: absolute;
+  width: 450px;
+  left: 50%;
+  margin-left: -225px;
+  height: 40px;
+  top: 50%;
+  margin-top: -20px;
+}
+
+p {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+}
+
+.word {
+  position: absolute;
+  width: 220px;
+  opacity: 0;
+}
+
+.letter {
+  display: inline-block;
+  position: relative;
+  float: left;
+  transform: translateZ(25px);
+  transform-origin: 50% 50% 25px;
+}
+
+.letter.out {
+  transform: rotateX(90deg);
+  transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.letter.behind {
+  transform: rotateX(-90deg);
+}
+
+.letter.in {
+  transform: rotateX(0deg);
+  transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.wisteria {
+  color: #8e44ad;
+}
+
+.belize {
+  color: #2980b9;
+}
+
+.pomegranate {
+  color: #c0392b;
+}
+
+.green {
+  color: #16a085;
+}
+
+.midnight {
+  color: #2c3e50;
+} */
+main {
+  flex: 1;
+  color: red;
+  padding-top: 7rem;
+  font-size: 5rem; }
+
+footer {
+  background-color: red; }
+
+.burger {
+  display: none;
+  z-index: 2; }
+
+@media (max-width: 767px) {
+  .burger {
+    display: block;
+    cursor: pointer;
+    padding: 0.7rem; }
+
+  .burger__button {
+    position: relative;
+    width: 5rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s; }
+
+  .burger__button-line {
+    display: inline-block;
+    height: 0.3rem;
+    width: 90%;
+    background-color: white;
+    border-radius: 0.3rem;
+    transition: all 0.4s; }
+
+  .burger__button.active span {
+    transform: scale(0); }
+
+  .burger__button.active::before {
+    transform: rotate(45deg);
+    top: 1.9rem; }
+
+  .burger__button.active::after {
+    transform: rotate(-45deg);
+    bottom: 1.8rem; }
+
+  .burger__button::before,
+  .burger__button::after {
+    content: "";
+    position: absolute;
+    height: 0.3rem;
+    width: 90%;
+    background-color: white;
+    border-radius: 0.3rem;
+    transition: all 0.5s; }
+
+  .burger__button::after {
+    bottom: 0.6rem; }
+
+  .burger__button::before {
+    top: 0.6rem; } }
+@media (max-width: 591px) {
+  .burger__button-line {
+    width: 80%; }
+
+  .burger__button::after {
+    bottom: 0.8rem;
+    width: 80%; }
+
+  .burger__button::before {
+    top: 0.8rem;
+    width: 80%; } }
+@media (max-width: 375px) {
+  .burger__button-line {
+    width: 70%; }
+
+  .burger__button::after {
+    bottom: 1rem;
+    width: 70%; }
+
+  .burger__button::before {
+    top: 1rem;
+    width: 70%; } }
+@media (max-width: 991px) {
+  .header__list {
+    gap: 20px; }
+
+  .header__list-item {
+    font-size: 2rem; } }
+@media (max-width: 767px) {
+  body.lock {
+    overflow: hidden; }
+
+  main {
+    padding-top: 5rem; }
+
+  .header__inner {
+    height: 5rem; }
+
+  .header__menu {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    height: 100%;
+    width: 100%;
+    background-color: #183636;
+    padding: 8rem 2.7rem 0 0;
+    display: flex;
+    justify-content: flex-end;
+    transition: all 0.4s ease;
+    overflow: auto; }
+
+  .header__menu.active {
+    left: 0%; }
+
+  .header__list {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4rem; }
+
+  .header__list-item {
+    padding: 0; }
+
+  .header__link {
+    color: #fff;
+    font-size: 3.4rem; } }
+@media (max-width: 591px) {
+  .header__inner {
+    height: 4rem; }
+
+  .logo {
+    font-size: 3rem; }
+
+  .header__link {
+    color: #fff;
+    font-size: 2.4rem; } }
+/*hover*/
+@media (min-width: 767px) {
+  .header__link::after {
+    content: "";
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    transition: width 0.5s ease-in-out;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.2);
+    transform: translateX(-10%);
+    width: 0%; }
+
+  .header__link:hover::after {
+    width: 60%; } }

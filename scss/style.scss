@@ -1,0 +1,37 @@
+/*Подключение шрифтов*/
+@import './fonts/fonts.scss';
+
+
+/*Стили body*/
+
+$mainFont: 'Nunito', sans-serif;
+
+body {
+  font-family: $mainFont;
+  font-weight: 400;
+  color: #fff;
+  height: 100%;
+}
+a {
+  font-weight: 700;
+}
+/*Ограничивающий контейнер*/
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+.container {
+  max-width: 141rem;
+  padding: 0 1.5rem;
+  width: 100%;
+  margin: 0 auto;
+  outline: 1px solid red;
+}
+
+@import './normalize.scss';
+@import './header.scss';
+@import './main.scss';
+@import './footer.scss';
+@import './blocks/burger.scss';
+@import './media.scss';
