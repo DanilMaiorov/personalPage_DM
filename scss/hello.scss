@@ -1,0 +1,51 @@
+.hello {
+}
+.hello__inner {
+  padding: 8rem 0;
+  display: flex;
+  gap: 4rem;
+}
+.hello__image {
+  flex: 0 0 40%;
+}
+.hello__image img {
+  display: block;
+  margin: 0 auto;
+  max-width: 40rem;
+  width: 100%;
+}
+.hello__content {
+  flex: 1 0 55%;
+  position: relative;
+}
+.hello__title {
+  line-height: 150%;
+  margin-bottom: 4rem;
+}
+.hello__title--name {
+  display: inline-block;
+  font-size: 9rem;
+  color: #619b9b;
+  padding-top: 3rem;
+}
+.hello__text {
+  font-size: 4.4rem;
+  margin-bottom: 4rem;
+}
+.hello__social {
+  
+}
+.hello__social-list {
+  display: flex;
+  gap: 2rem;
+}
+.hello__social-item {
+  width: 7rem;
+  margin-bottom: 4rem;
+}
+.hello__social-link {
+}
+.hello__button {
+}
+.button {
+}
