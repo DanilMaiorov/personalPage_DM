@@ -3,10 +3,9 @@
 .container {
 }
 .portfolio__inner {
-  padding: 8rem 0;
+  padding: 8rem 0 6rem 0;
 }
 .portfolio__title {
-  padding-bottom: 3rem;
 }
 .portfolio__content {
 /*   display: flex;
@@ -26,19 +25,20 @@
 }
 .portfolio__cards {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
-  gap: 3rem;
+  transition: all 0.2s ease;
 }
 .portfolio__cards-item {
-  flex: 1 1 21.95%;
-  max-width: 21.95%;
+  flex: 0 1 23%;
   padding: 1rem;
+  margin-bottom: calc((102.5% - 23% * 4) / 4);
+  margin-right: calc((102.5% - 23% * 4) / 4);
   box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
 }
-/* .portfolio__cards-item:last-child {
-  color:rebeccapurple
-} */
+.portfolio__cards-item:nth-child(4n) {
+  margin-right: 0;
+}
 .portfolio__cards-image {
   margin-bottom: 1rem;
   overflow: hidden;
@@ -49,4 +49,141 @@
   font-weight: 700;
 }
 .portfolio__cards-date {
+}
+.hide {
+  opacity: 0;
+  transform: translateY(15%);
+}
+.active {
+  opacity: 1;
+  transform: translateY(0%);
+  transition: all 0.2s ease;
+}
+.item-active {
+  color: #619b9b;
+}
+
+.portfolio__cards-info {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  z-index: 51;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5rem 0;
+  flex-direction: column;
+
+  transition: all 0.2s ease;
+}
+.portfolio__cards-info-wrapper {
+  width: 95rem;
+  max-width: 100%;
+  margin: auto;
+  //height: 100%;
+  //overflow-y: auto;
+}
+.portfolio__cards-info-content {
+  margin-top: -11.5rem;
+  background-color: #fff;
+  padding: 4rem;
+  transition: all 0.2s ease;
+  opacity: 0;
+  position: relative;
+}
+.portfolio__cards-info-title {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+.portfolio__cards-info-description {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+.portfolio__cards-info-stack {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+.portfolio__cards-info-stack--span {
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.portfolio__cards-info-date {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+.portfolio__cards-info-images {
+  outline: 2px solid green;
+  margin-bottom: 1.5rem;
+  //flex: 0 1 40%;
+}
+.portfolio__cards-info-images img {
+  width: 100%;
+  height: auto;
+  max-height: 40rem;
+  margin-bottom: 1.5rem;
+  
+}
+.portfolio__cards-info-buttons-item {
+  font-size: 2.2rem;
+}
+.portfolio__cards-info-buttons-item:last-child {
+  margin-left: 1em;
+}
+
+.portfolio__cards-info-close {
+  position: absolute;
+  padding: 2rem;
+  right: 2rem;
+  top: 2rem;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+}
+.portfolio__cards-info-close::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.3rem;
+  left: 0;
+  top: 50%;
+  background-color: #000;
+  transform: rotate(-45deg)
+}
+.portfolio__cards-info-close::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.3rem;
+  left: 0;
+  top: 50%;
+  background-color: rgb(0, 0, 0);
+  transform: rotate(45deg)
+}
+
+.show {
+  background-color: rgba(80, 80, 80, 0.3);
+  transition: all 0.2s ease;
+}
+.show-content {
+  opacity: 1;
+  transform: translateY(10%);
+  transition: all 0.2s ease;
+}
+.portfolio__cards-info::after {
+  content: "";
+  width: 100%;
+  height: 3rem;
+  margin-bottom: 11rem;
+}
+
+.info-popup {
+  position: relative;
 }

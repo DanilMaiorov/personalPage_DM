@@ -1,0 +1,41 @@
+.about {
+  display: flex;
+  overflow: hidden;
+  padding: 8rem 0;
+}
+.about__content {
+  flex: 0 0 100%
+}
+
+.about__inner {
+  width: 50%;
+  padding: 8rem 2rem 6rem 0;
+}
+
+.about__title {
+}
+.title {
+}
+.about__description {
+}
+.about__description-item {
+  font-size: 1.8rem;
+  padding-bottom: 1.5rem;
+  line-height: 130%;
+}
+.about__description-item:last-child {
+  padding-bottom: 0rem;
+}
+.about__image {
+  position: relative;
+  flex: 0 0 50%;
+  padding: 0 0 35%;
+  transform: translateX(-100%);
+}
+.about__image-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

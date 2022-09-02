@@ -5,12 +5,16 @@
 /*Стили body*/
 
 $mainFont: 'Nunito', sans-serif;
-
+html {
+}
 body {
   font-family: $mainFont;
   font-weight: 400;
   height: 100%;
 }
+/* body.lock {
+  overflow: hidden;
+} */
 main {
   flex: 1;
   padding-top: 7rem;
@@ -35,9 +39,11 @@ button {
 }
 /*Ограничивающий контейнер*/
 .wrapper {
+  //max-width: 180rem;
   display: flex;
   flex-direction: column;
   min-height: 100%;
+  position: relative;
 }
 .container {
   max-width: 141rem;
@@ -49,12 +55,15 @@ button {
 .title {
   font-size: 4.4rem;
   font-weight: 700;
+  padding-bottom: 3rem;
 }
 
 @import './normalize.scss';
 @import './header.scss';
 @import './hello.scss';
 @import './portfolio.scss';
+@import './about.scss';
+@import './skills.scss';
 
 @import './main.scss';
 @import './footer.scss';
