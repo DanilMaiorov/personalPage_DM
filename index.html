@@ -17,7 +17,7 @@
         <div class="container">
           <div class="header__inner">
             <div class="logo">
-              <a class="logo__link">
+              <a class="logo__link" href="#hello">
                 <span class="logo__link-span logo__link--name">danya_mayorov</span>
                 <span class="logo__link-span logo__link--span">danya_mayorov</span>
               </a>
@@ -32,19 +32,22 @@
               <div class="overlay"></div>
               <ul class="header__list">
                 <li class="header__list-item">
-                  <a class="header__link" href="hello">Привет!</a>
+                  <a class="header__link" href="#hello">Привет!</a>
                 </li>
                 <li class="header__list-item">
-                  <a class="header__link" href="#">Мои проекты</a>
+                  <a class="header__link" href="#portfolio">Мои проекты</a>
                 </li>
                 <li class="header__list-item">
-                  <a class="header__link" href="#">О себе</a>
+                  <a class="header__link" href="#about">О себе</a>
                 </li>
                 <li class="header__list-item">
-                  <a class="header__link" href="#">Блог</a>
+                  <a class="header__link" href="#skills">Skills</a>
                 </li>
                 <li class="header__list-item">
-                  <a class="header__link" href="#">Контакты</a>
+                  <a class="header__link" href="#blog">Блог</a>
+                </li>
+                <li class="header__list-item">
+                  <a class="header__link" href="#contacts">Написать</a>
                 </li>
               </ul>
             </nav>
@@ -66,22 +69,22 @@
               <div class="hello__social">
                 <ul class="hello__social-list">
                   <li class="hello__social-item">
-                    <a href="#" class="hello__social-link">
+                    <a href="https://t.me/dan1q" class="hello__social-link" target="_blank">
                       <img src="./img/icons/icons8-телеграм-100.svg" alt="telegram-icon">
                     </a>
                   </li>
                   <li class="hello__social-item">
-                    <a href="#" class="hello__social-link">
+                    <a href="https://vk.com/dan1q" class="hello__social-link" target="_blank">
                       <img src="./img/icons/icons8-vk-в-круге-100.svg" alt="vk-icon">
                     </a>
                   </li>
                   <li class="hello__social-item">
-                    <a href="#" class="hello__social-link">
+                    <a href="https://www.instagram.com/danyamayorov/" class="hello__social-link" target="_blank">
                       <img src="./img/icons/kisspng-social-media-snapchat-advertising-instagram-blog-5ae691c6e1ebb0.5038611815250600389254.png" alt="instagram-icon">
                     </a>
                   </li>
                   <li class="hello__social-item">
-                    <a href="#" class="hello__social-link">
+                    <a href="https://github.com/DanilMaiorov" class="hello__social-link" target="_blank">
                       <img src="./img/icons/icons8-github-100.svg" alt="github-icon">
                     </a>
                   </li>
@@ -98,7 +101,7 @@
         </div>
       </section>
       <hr>
-      <section class="portfolio">
+      <section class="portfolio" id="portfolio">
         <div class="container">
           <div class="portfolio__inner">
             <div class="title portfolio__title">
@@ -120,7 +123,7 @@
         </div>
       </section>
       <hr>
-      <section class="about"> 
+      <section class="about" id="about"> 
           <div class="about__content">
             <div class="container">
               <div class="about__inner">
@@ -129,14 +132,24 @@
                 </div>
                 <div class="about__description">
                   <p class="about__description-item">
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                      Привет, я Данил Майоров. Я из Екатеринбурга.
                   </p>
                   <p class="about__description-item">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit ullam totam distinctio fuga consequatur quibusdam porro molestiae architecto voluptates veniam.
-                </p>
-                <p class="about__description-item">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit ullam totam distinctio fuga consequatur quibusdam porro molestiae architecto.
-              </p>
+                    По образованию я инженер-железнодорожник. Но этот путь оказался мне не совсем по душе, поэтому я решил искать. И нашел.
+                  </p>
+                  <p class="about__description-item">
+                    Познакомившись с Веб-разработкой тогда я получил отклик внутри себя и решил, что хочу заниматься этим!
+                  </p>
+                  <p class="about__description-item">
+                    Я окончил курсы в онлайн-школе и регулярно прохожу всяческие тренинги, мастер-классы и марафоны, повышая свои навыуки и насмотренность.
+                  </p>
+                  <p class="about__description-item">
+                    Опыта работы в компании, я, к сожалению, не имею. Но за время, которое я занимаюсь разработкой, успешно завершил несколько фриланс-проектов.
+                  </p>
+                  <p class="about__description-item">
+                    На данный момент я нахожусь в поисках работы в компании, в которой мог бы быть полезен, проявить все свои навыки и прокачивать их.
+                  </p>
+                  
                 </div>
               </div>
             </div>
@@ -145,59 +158,138 @@
             <img class="about__image-item" src="./img/photo_about.jpg" alt="me">
           </div>
       </section>
-      <section class="skills">
+      <hr>
+      <section class="skills" id="skills">
         <div class="container">
           <div class="skills__inner">
             <div class="skills__title title">
               Skills
             </div>
+            <div class="skills__text">
+              Самая сложная работа - <span class="skills__text--span">это работа над собой!</span> Вдохновляюсь людьми, которые достигли определенных высот в кодинге. Прокачиваю свои скиллы без регистрации и СМС ото дня ко дню! Останавливаться не намерен!  <!-- Я ото дня ко дню работаю над повышением своих компетенций в Хард скиллах, стремлюсь пополнять копилку знаний как новыми технологиями, так и расширением границ в уже изученных и параллельно оттачиваю Софт скиллы -->
+            </div>
             <div class="skills__content">
               <div class="skills__content-hard">
-                <div class="skills__content-title">Hard skills</div>
+                <div class="skills__content-title">Hard skills:</div>
                 <ul class="skills__content-hard-list">
                   <li class="skills__content-hard-list-item">
-                    <span class="skills__content-hard-list-item--span">#</span> Hard Skill 1
+                    <span class="skills__content-hard-list-item--span">#</span> HTML5
                   </li>
                   <li class="skills__content-hard-list-item">
-                    <span class="skills__content-hard-list-item--span">#</span> Hard Skill 2
+                    <span class="skills__content-hard-list-item--span">#</span> CSS/Sass/SCSS <br>
+                    <span class="skills__content-hard-list-item--bem">БЭМ</span>
                   </li>
                   <li class="skills__content-hard-list-item">
-                    <span class="skills__content-hard-list-item--span">#</span> Hard Skill 3
+                    <span class="skills__content-hard-list-item--span">#</span> JavaScript
                   </li>
                   <li class="skills__content-hard-list-item">
-                    <span class="skills__content-hard-list-item--span">#</span> Hard Skill 4
+                    <span class="skills__content-hard-list-item--span">#</span> Git
                   </li>
                   <li class="skills__content-hard-list-item">
-                    <span class="skills__content-hard-list-item--span">#</span> Hard Skill 5
+                    <span class="skills__content-hard-list-item--span">#</span> Gulp, Webpack
+                  </li>
+                  <li class="skills__content-hard-list-item">
+                    <span class="skills__content-hard-list-item--span">#</span> Figma, Photoshop
                   </li>
                 </ul>
               </div>
               <div class="skills__content-soft">
-                <div class="skills__content-title">Soft skills</div>
+                <div class="skills__content-title">Soft skills:</div>
                 <ul class="skills__content-soft-list">
-                  <li class="skills__content-soft-list-item">Soft Skill 1</li>
-                  <li class="skills__content-soft-list-item">Soft Skill 2</li>
-                  <li class="skills__content-soft-list-item">Soft Skill 3</li>
-                  <li class="skills__content-soft-list-item">Soft Skill 4</li>
-                  <li class="skills__content-soft-list-item">Soft Skill 5</li>
+                  <li class="skills__content-soft-list-item">
+                    <span class="skill__content-soft-list-item--span">!</span>Нацелен на результат</li>
+                  <li class="skills__content-soft-list-item">
+                    <span class="skill__content-soft-list-item--span">!</span>Умею работать в команде</li>
+                  <li class="skills__content-soft-list-item">
+                    <span class="skill__content-soft-list-item--span">!</span>Люблю изучать новое и развиваться</li>
+                  <li class="skills__content-soft-list-item">
+                    <span class="skill__content-soft-list-item--span">!</span>Ответственно выполняю поставленные задачи</li>
+                  <li class="skills__content-soft-list-item">
+                    <span class="skill__content-soft-list-item--span">!</span>Говорю на английском</li>
                 </ul>
               </div>
             </div>
           </div>
         </div>
       </section>
-    </main>
+      <hr>
+      <section class="blog" id="blog">
+        <div class="container">
+          <div class="blog__inner">
+            <div class="blog__title title">
+              Блог
+            </div>
+            <div class="blog__content">
 
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr>
+      <section class="contact" id="contacts">
+        <div class="container">
+          <div class="contact__inner">
+            <div class="contact__title title">Напишите мне</div>
+            <div class="contact__content">
+              <div class="contact__text">
+                <div class="contact__text-item">
+                  Вы работаете над каким-то проектом? Я буду рад помочь вам в реализации задуманного! Напишите мне и начнем работать над этим вместе!
+                </div>
+              </div>
+              <form id="form1" name="user-form" class="contact__form" action="#">
+                <div class="contact__form-inputs">
+                  <input class="contact__form-inputs-item" type="text" name="user-name" placeholder="Ваше имя">
+                  <input class="contact__form-inputs-item" type="email" name="user-email" placeholder="Ваш E-mail">
+                </div>
+                <div class="contact__form-textarea">
+                  <textarea class="contact__form-textarea-item" name="message" id="message" placeholder="Ваше сообщение"></textarea>
+                </div>
+                <div class="contact__form-button">
+                  <button>Отправить сообщение</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr>
+    </main>
     <footer class="footer">
       <div class="footer__content">
         <div class="container">    
           <div class="footer__inner">
-            footer
+            <div class="footer__name">
+              Copyright 2022 danya_mayorov.
+            </div>
+            <div class="footer__social">
+              <ul class="footer__social-list">
+                <li class="footer__social-item">
+                  <a class="footer__social-link" href="https://t.me/dan1q" target="_blank">
+                    <img src="./img/icons/icons8-телеграм-50.svg" alt="telegram-icon-footer">
+                  </a>
+                </li>
+                <li class="footer__social-item">
+                  <a class="footer__social-link" href="https://vk.com/dan1q" target="_blank">
+                    <img src="./img/icons/icons8-vk-в-круге-50.svg" alt="vk-icon-footer">
+                  </a>
+                </li>
+                <li class="footer__social-item">
+                  <a class="footer__social-link" href="https://github.com/DanilMaiorov" target="_blank">
+                    <img src="./img/icons/icons8-github-50.svg" alt="github-icon-footer">
+                  </a>
+                </li>
+                <li class="footer__social-item">
+                  <a class="footer__social-link" href="https://www.instagram.com/danyamayorov/" target="_blank">
+                    <img src="./img/icons/kisspng-social-media-snapchat-advertising-instagram-blog-5ae691c6e1ebb0.5038611815250600389254.png" alt="inst-icon-footer">
+                  </a>
+                </li>
+
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </footer>
   </div>
 </body>
-
 </html>

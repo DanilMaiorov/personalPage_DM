@@ -41,7 +41,11 @@
 }
 .hello__social-item {
   width: 7rem;
+/*   border-radius: 50%;
+  overflow: hidden; */
   margin-bottom: 4rem;
+  transition: all 0.4s ease;
+  
 }
 .hello__social-link {
 }

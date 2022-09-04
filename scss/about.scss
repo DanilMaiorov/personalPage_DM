@@ -1,7 +1,6 @@
 .about {
   display: flex;
   overflow: hidden;
-  padding: 8rem 0;
 }
 .about__content {
   flex: 0 0 100%
@@ -19,9 +18,12 @@
 .about__description {
 }
 .about__description-item {
-  font-size: 1.8rem;
+  text-indent: 2.5rem;
+  text-align: justify;
+  font-size: 2rem;
   padding-bottom: 1.5rem;
   line-height: 130%;
+  
 }
 .about__description-item:last-child {
   padding-bottom: 0rem;

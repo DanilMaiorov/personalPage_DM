@@ -50,7 +50,6 @@ button {
   padding: 0 1.5rem;
   width: 100%;
   margin: 0 auto;
-  outline: 1px solid red;
 }
 .title {
   font-size: 4.4rem;
@@ -64,7 +63,8 @@ button {
 @import './portfolio.scss';
 @import './about.scss';
 @import './skills.scss';
-
+@import './blog.scss';
+@import './contact.scss';
 @import './main.scss';
 @import './footer.scss';
 @import './blocks/burger.scss';

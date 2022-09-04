@@ -1,9 +1,28 @@
+.skills {
+  background-color: rgba(#619b9b, 0.2);
+}
 .container {
 }
 .skills__inner {
   padding: 8rem 0;
 }
 .skills__title {
+}
+.skills__text {
+  text-indent: 2.5rem;
+  text-align: justify;
+  font-size: 2rem;
+  padding-bottom: 3rem;
+  line-height: 130%;
+}
+.skills__text--span {
+  color: #619b9b;
+  text-decoration: underline;
+}
+.skills__content-hard-list-item--bem {
+  color: #619b9b;
+  display: inline-block;
+  padding: 0.5rem 0 0 5rem;
 }
 .title {
 }
@@ -16,27 +35,41 @@
 }
 
 .skills__content-hard {
-  flex: 0 1 50%;
+  flex: 0 1 40%;
+  padding-right: 3rem;
 }
-
 .skills__content-soft {
-  flex: 0 1 50%;
+  flex: 0 1 55%;
 }
 
 .skills__content-soft-list {
+  font-size: 2.4rem;
 }
 .skills__content-soft-list-item {
 }
 
 .skills__content-hard-list-item--span {
   display: inline-block;
-  padding-left: 3rem;
-  color: #619b9b;
+  color: #f97e00;
   font-size: 4rem;
   font-size: 700;
+  
+}
+.skill__content-soft-list-item--span {
+  display: inline-block;
+  color: #f97e00;
+  font-size: 4rem;
+  font-size: 700;
+  padding-right: 1rem;
 }
 .skills__content-hard-list {
+  font-size: 2.4rem;
 }
-.skills__content-hard-list-item {
+.skills__content-hard-list-item,
+.skills__content-soft-list-item  {
+  padding: 0 0 0.5rem 3rem;
 }
-
+.skills__content-hard-list-item:last-child,
+.skills__content-soft-list-item:last-child  {
+  padding-bottom: 0rem;
+}
