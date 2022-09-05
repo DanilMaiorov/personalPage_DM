@@ -11,6 +11,7 @@
 </head>
 
 <body>
+  
   <div class="wrapper">
     <header class="header">
       <div class="header__content">
@@ -141,7 +142,7 @@
                     Познакомившись с Веб-разработкой тогда я получил отклик внутри себя и решил, что хочу заниматься этим!
                   </p>
                   <p class="about__description-item">
-                    Я окончил курсы в онлайн-школе и регулярно прохожу всяческие тренинги, мастер-классы и марафоны, повышая свои навыуки и насмотренность.
+                    Я окончил курсы в онлайн-школе и регулярно прохожу всяческие тренинги, мастер-классы и марафоны, повышая свои навыки и насмотренность.
                   </p>
                   <p class="about__description-item">
                     Опыта работы в компании, я, к сожалению, не имею. Но за время, которое я занимаюсь разработкой, успешно завершил несколько фриланс-проектов.
@@ -155,7 +156,7 @@
             </div>
           </div>
           <div class="about__image">
-            <img class="about__image-item" src="./img/photo_about.jpg" alt="me">
+            <img class="about__image-item" src="./img/auFRVjBSZ7Y.jpg" alt="me">
           </div>
       </section>
       <hr>
@@ -166,7 +167,7 @@
               Skills
             </div>
             <div class="skills__text">
-              Самая сложная работа - <span class="skills__text--span">это работа над собой!</span> Вдохновляюсь людьми, которые достигли определенных высот в кодинге. Прокачиваю свои скиллы без регистрации и СМС ото дня ко дню! Останавливаться не намерен!  <!-- Я ото дня ко дню работаю над повышением своих компетенций в Хард скиллах, стремлюсь пополнять копилку знаний как новыми технологиями, так и расширением границ в уже изученных и параллельно оттачиваю Софт скиллы -->
+              Прокачиваю свои скиллы без регистрации и СМС ото дня ко дню! Вдохновляюсь людьми, которые достигли определенных высот в кодинге. Пусть этот путь тернистый и сложный, несмотря на это, я не намерен останавливаться!
             </div>
             <div class="skills__content">
               <div class="skills__content-hard">
@@ -238,8 +239,8 @@
               </div>
               <form id="form1" name="user-form" class="contact__form" action="#">
                 <div class="contact__form-inputs">
-                  <input class="contact__form-inputs-item" type="text" name="user-name" placeholder="Ваше имя">
-                  <input class="contact__form-inputs-item" type="email" name="user-email" placeholder="Ваш E-mail">
+                  <input class="contact__form-inputs-item name-input" type="text" name="user-name" placeholder="Ваше имя">
+                  <input class="contact__form-inputs-item email-input" type="email" name="user-email" placeholder="Ваш E-mail">
                 </div>
                 <div class="contact__form-textarea">
                   <textarea class="contact__form-textarea-item" name="message" id="message" placeholder="Ваше сообщение"></textarea>
@@ -283,13 +284,24 @@
                     <img src="./img/icons/kisspng-social-media-snapchat-advertising-instagram-blog-5ae691c6e1ebb0.5038611815250600389254.png" alt="inst-icon-footer">
                   </a>
                 </li>
-
               </ul>
             </div>
           </div>
         </div>
       </div>
     </footer>
+    <div class="modal modal-hide" id="modal">
+      <div class="modal__wrapper">
+        <div class="modal__window" role="dialog" aria-modal="true">
+          <div class="modal__close">
+          </div>
+          <div class="modal__text">
+            Эта форма настроена на отправку данных с валидацией, но, поскольку свой домен я еще не приобрел, то работает она только в тестовом режиме.
+          </div>
+          <img src="./img/photoeditorsdk-export.png" alt="okCat-img">
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 </html>

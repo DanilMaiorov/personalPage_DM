@@ -7,17 +7,6 @@ const burgerLineBtn = document.querySelector('.burger__button-line');
 const headerMenu = document.querySelector('.header__menu');
 const body = document.querySelector('body');
 
-/*   headerMenu.classList.toggle('active');
-  burgerBtn.classList.toggle('active');
-  body.classList.toggle('lock'); */
-  /*   if(headerMenu.classList.contains('active')) {
-      document.querySelector('.header__inner').style.paddingRight = '17px';
-      document.querySelector('.portfolio__content').style.paddingRight = '17px';
-    } else {
-      document.querySelector('.header__inner').style.paddingRight = '0px';
-      document.querySelector('.portfolio__content').style.paddingRight = '0px';
-    } 
-});*/
 const burgerMenuOpen = () => {
   headerMenu.classList.toggle('active');
   burgerBtn.classList.toggle('active');
@@ -199,14 +188,23 @@ class PortfolioCard {
     }
   }
 }
-const getData = async (url) => {
+
+////////////////////////////////////////////////////////////
+
+const getData = async (url) => { //функция getData
   const response = await fetch(url);
   if (!response.ok) {
     throw new Error(`Could not fetch ${url}, status: ${response.status}`);
   }
   return await response.json();
 };
-getData('./db/db.json')
+
+////////////////////////////////////////////////////////////
+
+
+
+
+getData('./db/db.json') //вызов getData для карточек портфолио
   .then(data => {
     data.forEach(({
       id,
@@ -288,6 +286,8 @@ getData('./db/db.json')
     });
   });
 
+
+
 /* BLOG */
 
 class BlogCard {
@@ -331,8 +331,9 @@ class BlogCard {
       });
     }
   }
-}
 
+}
+let numberBlog;
 getData('./db/dbBlog.json')
   .then(data => {
     data.forEach(({
@@ -346,11 +347,22 @@ getData('./db/dbBlog.json')
       let newBlogCard = new BlogCard(id, title, date, text, tags, image, '.blog__content');
       newBlogCard.renderBlogCard();
     });
-        const blogItems = document.querySelectorAll('.content-item');
-    blogItems.forEach(item => {
-      slicer(item);
-    });
+      const blogItems = document.querySelectorAll('.content-item');
+      blogItems.forEach(item => {
+        slicer(item);
+      });
+      const blogBtns = document.querySelectorAll('.content-item__button-item');
+      blogBtns.forEach((btn, index) => {
+        btn.addEventListener('click', (e) => {
+          if(e.target === btn) {
+            numberBlog = (index + 1);
+            console.log(numberBlog);
+            window.open('./blog.html?&' + numberBlog);
+          }
+        });
+      });
   });
+  console.log(numberBlog);
 
   //slicer
 const slicer = (par) => {
@@ -400,8 +412,6 @@ const slicer = (par) => {
 
 const linksHeader = header.querySelectorAll('.header__link');
 
-burgerBtn.addEventListener('click', burgerMenuOpen);
-
 linksHeader.forEach((item, index) => {
   item.addEventListener('click', (e) => {
       e.preventDefault();
@@ -415,3 +425,241 @@ linksHeader.forEach((item, index) => {
       burgerMenuClose(headerMenu, burgerBtn);
   });
 });
+
+
+
+//formSend
+
+const form = document.querySelector('form');
+
+const message = {
+  loading: 'Отправляю сообщение...',
+  loadingImg: './img/tumblr_mudg73OFlK1rgpyeqo1_500.gif',
+  success: 'Спасибо, за доверие! Я отвечу вам в ближайшее время!',
+  successImg: './img/okcatt.gif',
+  failure: 'Что-то пошло не так',
+  failureImg: './img/error.png',
+};
+
+///////////////////////////////////
+
+const sendData = async (url, data) => { //postData
+  const resolve = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-type': 'application/json'
+    },
+    body: data
+  });
+  return await resolve.json();
+};
+
+////////////////////////////////////
+
+/*VALIDATION */
+
+const inputName = document.querySelector('.name-input');
+const inputEmail = document.querySelector('.email-input');
+const formTextarea = document.querySelector('.contact__form-textarea-item');
+const formInputs = [inputName, inputEmail, formTextarea];
+
+const testEmail = (email) => {
+  let test = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/gi;
+  return test.test(String(email).toLowerCase());
+};
+
+inputName.addEventListener('input', (e) => {
+  e.target.value = e.target.value.replace(/[^0-9a-zA-Zа-яА-Я]+/, '');
+});
+formTextarea.addEventListener('input', (e) => {
+  e.target.value = e.target.value.replace(/[^0-9a-zA-Zа-яА-Я\.\,\!\?\+\=\%\@\-\_]+/, '');
+});
+const notice = document.createElement('div');
+notice.classList.add('notice');
+
+const empty = document.createElement('div');
+empty.classList.add('empty');
+
+const emptyRemove = () => {
+  formInputs.forEach(input => {
+    input.addEventListener('input', (e) => {
+      if(e.target.value) {
+        input.classList.remove('error');
+      }
+      if(inputName.value && inputEmail.value && formTextarea.value) {
+        empty.remove();
+      }
+    }); 
+  });
+};
+emptyRemove();
+
+const noticeRemove = (field) => {
+  field.addEventListener('input', () => {
+      if(field.value) {
+        field.classList.remove('error');
+        notice.remove();
+      }
+    });
+};
+noticeRemove(inputEmail);
+noticeRemove(formTextarea);
+
+const noticeAdd = (inputItem, text, elem) => {
+  inputItem.classList.add('error');
+  elem.textContent = text;
+  form.append(elem);
+};
+
+const remover = (inputItem) => {
+  noticeRemove(inputItem);
+  inputItem.classList.remove('error');
+};
+
+const validate = () => {
+  let nameValue = inputName.value;
+  let emailValue = inputEmail.value;
+  let messageValue = formTextarea.value;
+  let emptyInputs = Array.from(formInputs).filter(input => input.value === '');
+  formInputs.forEach(input => {
+    if(input.value === '') {
+      noticeAdd(input, 'Поля не должны быть пустыми', empty);
+    } else {
+      input.classList.remove('error');
+    }
+  });
+  if(emptyInputs.length !== 0) {
+    return false;
+  }
+  if(!testEmail(emailValue)) {
+    noticeAdd(inputEmail, 'Некорректный E-mail', notice);
+    return false;
+  } else {
+    remover(inputEmail);
+  }
+  if(messageValue.length < 10) {
+    noticeAdd(formTextarea, 'Минимум 10 символов', notice);
+    return false;
+  } else {
+    remover(formTextarea);
+  }
+  return true;
+};
+
+/*ОТПРАВКА ФОРМЫ */
+
+const bindPostData = (form) => {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const statusMessage = document.createElement('div');
+      statusMessage.classList.add('status');
+
+      if(validate()) {
+        showLoadBlock(form, statusMessage);
+      }
+      const formData = new FormData(form);
+      const object = {};
+      formData.forEach((value, key) => {
+        object[key] = value;
+      });
+      if(validate()) {
+        sendData(/*'./server.php'*/'https://jsonplaceholder.typicode.com/posts', JSON.stringify(object)).then(data => {
+          console.log(data);
+          setTimeout(() => {
+            showResultBlock(form, statusMessage, message.successImg, message.success);
+            setTimeout(() => {
+              renderForm(form, statusMessage);
+            }, 2000);
+          }, 1000);
+        }).catch(() => {
+          showResultBlock(form, statusMessage, message.failureImg, message.failure);
+          setTimeout(() => {
+            renderForm(form, statusMessage);
+          }, 2500);
+        }).finally(() => {
+          form.reset();
+        });
+      } else {
+        return;
+      }
+    }); 
+};
+bindPostData(form);
+
+/*функции отрисовки сообщения*/
+const showLoadBlock = (form, block) => {
+  Array.from(form.children).forEach(item => {
+    item.style.display = 'none';
+  });
+  block.textContent = message.loading;
+  block.innerHTML = `
+    <img src="${message.loadingImg}" alt="load-cat">
+    ${block.textContent}
+  `;
+  form.append(block);
+};
+const showResultBlock = (form, block, resultImg, result) => {
+  block.innerHTML = `
+  <img src="${resultImg}" alt="load-cat">
+  ${block.textContent = result}
+    `;
+  form.reset();
+};
+const renderForm = (form, block) => {
+  block.remove();
+  Array.from(form.children).forEach(item => {
+    item.style.display = 'block';
+  });
+};
+
+
+
+
+//observer
+const modal = document.querySelector('.modal');
+const modalContent = modal.querySelector('.modal__window');
+const openModal = () => {
+  modal.classList.remove('modal-hide');
+  modal.classList.add('modal-show');
+  modalContent.classList.add('modal__window--active');
+  disableScrolling();
+
+};
+const modalClose = () => {
+  modal.classList.remove('modal-show');
+  modal.classList.add('modal-hide');
+  modalContent.classList.remove('modal__window--active');
+};
+
+modal.addEventListener('click', (e) => {
+  if (!e.target.closest('.modal__window') || e.target.classList.contains('modal__close')) {
+    modalClose();
+    window.onscroll = function () {};
+  }
+});
+
+const endElem = document.createElement('div');
+    document.querySelector('.footer').append(endElem);
+    let count = 0; 
+    const scrollEnd = (endElement) => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          if(entries[0].isIntersecting && count === 0) {
+            count++;
+            openModal();
+          }
+        }, {
+          rootMargin: '100px',
+        }
+      );
+      observer.observe(endElement);
+    }; 
+scrollEnd(endElem);
+
+
+//open burger
+burgerBtn.addEventListener('click', burgerMenuOpen);
+
+
+

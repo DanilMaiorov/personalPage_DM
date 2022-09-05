@@ -1,7 +1,6 @@
 /*Подключение шрифтов*/
 @import './fonts/fonts.scss';
 
-
 /*Стили body*/
 
 $mainFont: 'Nunito', sans-serif;
@@ -68,4 +67,5 @@ button {
 @import './main.scss';
 @import './footer.scss';
 @import './blocks/burger.scss';
+@import './blocks/popup.scss';
 @import './media.scss';
