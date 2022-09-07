@@ -137,6 +137,9 @@
     transform: translateX(25%);
     transform: translateY(50%);
   }
+  .hello__button a {
+    font-size: 3.4rem;
+  }
   .hello__social-item {
     margin-bottom: 0;
   }
@@ -249,6 +252,9 @@
   .hello__button {
     transform: translateX(25%);
     transform: translateY(70%);
+  }
+  .hello__button a {
+    font-size: 2.8rem;
   }
   .portfolio__list {
     gap: 1.5rem;
