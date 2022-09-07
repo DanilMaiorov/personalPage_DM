@@ -1,80 +1,227 @@
 [
   {
     "id": 1,
-    "title": "Pawadise",
-    "date": "01/01/2021",
-    "description": "description_1",
+    "title": "Мое резюме",
+    "date": "02/16/2022",
+    "description": "Мой личный мини-сайт резюме. В нем я реализовал переключениt языка, с русского на английский и наоборот. Страница адаптивна",
     "type": "landing-page",
-    "stack": "stack_1",
+    "stack": "HTML, CSS, JS",
     "images": [
-      "./img/example1.jpg",
-      "./img/example1-2.jpg",
-      "./img/example1-3.jpg"
-    ]
+      "./img/resume.jpg",
+      "./img/resume1.jpg",
+      "./img/resume2.jpg"
+    ],
+    "rootLink": "https://github.com/DanilMaiorov/resume_Maiorov_Danil",
+    "showLink": "https://danilmaiorov.github.io/resume_Maiorov_Danil/"
   },
   {
     "id": 2,
-    "title": "site_2",
-    "date": "02/02/2022",
-    "description": "description_2",
+    "title": "Pawadise Cats",
+    "date": "02/16/2022",
+    "description": "Двухстраничный сайт щеток для вычесывания шерсти. Фриланс проект. Осуществлена адаптивная верстка и стилизация страниц. В проекте реализован скрипт бургер-меню. Также реализованы карточки с фотографиями выбранного товара и их переключением. Реализован функционал корзины. Удаление/добавление/подсчет суммы посредстом LocalStorage. Все страницы адаптивны",
     "type": "multi-page",
-    "stack": "stack_2",
+    "stack": "HTML, CSS/SCSS, JS",
     "images": [
-      "./img/example2.jpg",
-      "./img/example2-2.jpg",
-      "./img/example2-3.jpg"
-    ]
+      "./img/cats.jpg",
+      "./img/cats1.jpg",
+      "./img/cats2.jpg"
+    ],
+    "rootLink": "https://github.com/DanilMaiorov/Pawadise_catsBrushes_FL",
+    "showLink": "https://danilmaiorov.github.io/Pawadise_catsBrushes_FL/index.html"
   },
   {
     "id": 3,
-    "title": "site_3",
-    "date": "03/03/2023",
-    "description": "description_3",
-    "type": "landing-page",
-    "stack": "stack_3",
+    "title": "Предприятия по производству соды",
+    "date": "17/03/2022",
+    "description": "Мультистраничный сайт предприятий РФ по производству соды. Фриланс проект.  Осуществлена адаптивная верстка и стилизация страниц. В проекте реализованы переходы по страницам, заимствован и использован динамический адаптив, выпадающее меню в шапке страницы и скрипт бургер-меню.",
+    "type": "multi-page",
+    "stack": "HTML, CSS/SCSS, JS, GULP",
     "images": [
-      "./img/example3.jpg",
-      "./img/example3-2.jpg",
-      "./img/example3-3.jpg"
-    ]
+      "./img/soda.jpg",
+      "./img/soda1.jpg",
+      "./img/soda2.jpg"
+    ],
+    "rootLink": "https://github.com/DanilMaiorov/sodaPlants/",
+    "showLink": "https://danilmaiorov.github.io/soda_Plants_multiPages/"
   },
   {
     "id": 4,
-    "title": "site_4",
-    "date": "04/04/2024",
-    "description": "description_4",
+    "title": "Электро-Н",
+    "date": "18/01/2022",
+    "description": "Одностраничный сайт-визитка предприятия услуг электрика. Проект являлся моим дипломным проектом на курсе. Верстка и стили предоставлялись. В проекте мной реализован функционал слайдера на главном экране, слайдера карусели на блоке с услугами. Реализован аккордеон с закрытием вкладок. Валидация и отправка форм посредством Fetch с оповещением пользователя о результате. Также плавная прокрутка по элементам страницы и прокрутка до шапки страницы при нажатии на кнопку внизу экрана, которая появляется при определенной величине прокрутки. Реализовано открытие и закрытие модальных окон.",
     "type": "landing-page",
-    "stack": "stack_4",
+    "stack": "CSS, JS, FETCH, WEBPACK",
     "images": [
-      "./img/example4.jpg",
-      "./img/example4-2.jpg",
-      "./img/example4-3.jpg"
-    ]
+      "./img/electric.jpg",
+      "./img/electric1.jpg",
+      "./img/electric2.jpg"
+    ],
+    "rootLink": "https://github.com/DanilMaiorov/Electric-",
+    "showLink": "https://danilmaiorov.github.io/Electric-/"
   },
   {
     "id": 5,
-    "title": "site_5",
-    "date": "05/05/2025",
-    "description": "description_5",
-    "type": "mini-app",
-    "stack": "stack_5",
+    "title": "Охранная организация Леонис",
+    "date": "20/04/2022",
+    "description": "Одностраничный сайт-визитка охранной организации. Фриланс проект.  Осуществлена адаптивная верстка и стилизация страницы. В проекте реализовано меню бургер, откртытие разных модальных, в зависимости от нажатой кнопки. Заимствован и использован динамический адаптив элементов. Подключена библиотека swiper.js.",
+    "type": "landing-page",
+    "stack": "HTML, CSS/SCSS, JS, SWIPERJS, GULP",
     "images": [
-      "./img/example5.jpg",
-      "./img/example5-2.jpg",
-      "./img/example5-3.jpg"
-    ]
+      "./img/leonis.jpg",
+      "./img/leonis1.jpg",
+      "./img/leonis2.jpg"
+    ],
+    "rootLink": "https://github.com/DanilMaiorov/Security_organization-LEONIS-",
+    "showLink": "https://danilmaiorov.github.io/leonisSecurity/"
   },
   {
     "id": 6,
-    "title": "site_6",
-    "date": "06/06/2026",
-    "description": "description_6",
-    "type": "multi-page",
-    "stack": "stack_6",
+    "title": "Daria Maiorova",
+    "date": "01/03/2022",
+    "description": "Одностраничный сайт-визитка художника Дарьи Майоровой. Фриланс проект. Осуществлена адаптивная верстка и стилизация страницы. Заимствован и использован динамический адаптив элементов.",
+    "type": "landing-page",
+    "stack": "HTML, CSS, JS, GULP",
     "images": [
-      "./img/example6.jpg",
-      "./img/example6-2.jpg",
-      "./img/example6-3.jpg"
-    ]
+      "./img/daria.jpg",
+      "./img/daria1.jpg", 
+      "./img/daria2.jpg"
+    ],
+    "rootLink": "https://github.com/DanilMaiorov/dariaMaiorova",
+    "showLink": "https://danilmaiorov.github.io/dariaMaiorova/"
+  },
+  {
+    "id": 7,
+    "title": "Мини сервис поздравлений с днем рождения",
+    "date": "25/08/2022",
+    "description": "Сервис генерации открыток с поздравленями с днем рождения. Практический проект. Осуществлена адаптивная верстка и стилизация страницы. Реализованы фильтры на мужские и женские открытки, кнопки переключения пола. Кнопки смены открытки или поздравления с возможностью вернуться на предыдущую. Данные берутся из JSON файла. Реализована возможность сохранения понравившейся открытки с текстом через Canvas.",
+    "type": "mini-app",
+    "stack": "HTML, CSS/SCSS, JS, FETCH",
+    "images": [
+      "./img/happybirthday.jpg",
+      "./img/happybirthday1.jpg",
+      "./img/happybirthday2.jpg"
+    ],
+    "rootLink": "https://github.com/DanilMaiorov/happy_birthday",
+    "showLink": "https://danilmaiorov.github.io/happy_birthday/"
+  },
+  {
+    "id": 8,
+    "title": "Супер Герои Marvel",
+    "date": "11/08/2022",
+    "description": "Мини-проект с карточками супергероев из фильмов Marvel. Практический проект. Осуществлена адаптивная верстка и стилизация страницы. Отрисовка карточек ведется динамечески из JSON файла. В проект реализованы фильтры отрисовки карточек на страницу: по фильму, по полу героя и его имени (все последовательно).",
+    "type": "mini-app",
+    "stack": "HTML, CSS/SCSS, JS, FETCH, WEBPACK",
+    "images": [
+      "./img/heroes.jpg",
+      "./img/heroes1.jpg",
+      "./img/heroes2.jpg"
+    ],
+    "rootLink": "https://github.com/DanilMaiorov/superHeroes__cardCollection",
+    "showLink": "https://danilmaiorov.github.io/superHeroes__cardCollection/"
+  },
+  {
+    "id": 9,
+    "title": "Калькулятор верстки экранов",
+    "date": "30/11/2021",
+    "description": "Проект калькулятора услуг по разработке верстки сайтов в пересчете на экраны с дополнительными услугами. Проект с учебного курса. В проекте реализованы алгоритмы расчет стоимости по формулам. Добавление экранов к расчету, чекбоксы дополнительных услуг и бегунок процента отката посреднику. Реализована блокировка всех элементов по кнопке Рассчитать, а также Сброс значений на кнопку Сброс. Проект реализован в рамках одного объекта с методами. Приложение адаптивно",
+    "type": "mini-app",
+    "stack": "CSS, JS",
+    "images": [
+      "./img/calculator.jpg",
+      "./img/calculator1.jpg",
+      "./img/calculator2.jpg"
+    ],
+    "rootLink": "https://github.com/DanilMaiorov/calculatorHTML",
+    "showLink": "https://danilmaiorov.github.io/calculatorHTML/"
+  },
+  {
+    "id": 10,
+    "title": "Oxygen",
+    "date": "20/08/2022",
+    "description": "Одностраничный сайт студии веб-разработки OXYGEN. Практический проект. Осуществлена адаптивная верстка и стилизация страницы. Тренировочный проект, направленный на верстку и стили. Также в проекте реализован скрипт бургер-меню и плавной прокрутки по странице по нажатию на якорные ссылки. В одном из блоков интегрировано видео.",
+    "type": "landing-page",
+    "stack": "HTML, CSS(FLEXBOX/GRID), JS",
+    "images": [
+      "./img/oxygen.jpg",
+      "./img/oxygen1.jpg",
+      "./img/oxygen2.jpg"
+    ],
+    "rootLink": "https://danilmaiorov.github.io/OXYGEN__LandingPage/",
+    "showLink": "https://github.com/DanilMaiorov/OXYGEN__LandingPage"
+  },
+  {
+    "id": 11,
+    "title": "Batman Promo",
+    "date": "30/03/2022",
+    "description": "Одностраничный промо-сайт премьеры фильма Batman. Практический проект. Осуществлена адаптивная верстка и стилизация страницы. В данном проекте реализован скрипт бургер-меню. Открытие/закрытие модального окна с проигрыванием видео, а также подключен SwiperJs.",
+    "type": "landing-page",
+    "stack": "HTML, CSS, JS, SWIPERJS",
+    "images": [
+      "./img/batman.jpg",
+      "./img/batman1.jpg",
+      "./img/batman2.jpg"
+    ],
+    "rootLink": "https://danilmaiorov.github.io/Promo_Batman_STUDY/",
+    "showLink": "https://github.com/DanilMaiorov/Promo_Batman_STUDY"
+  },
+  {
+    "id": 12,
+    "title": "toDoList",
+    "date": "14/12/2021",
+    "description": "Веб приложение To Do list. Учебный проект. Осуществлена верстка и стилизация приложения. Реализован функционал добавления дел, отетки о выполнении дел, а также их удалении. Если пользователь не ввел никакой информации по делу и попробовал добивать, то скрипт сообщит об этом. Логика построена на использовании LocalStorage, что позволяет сохранять данные даже при закрsnbb браузера.",
+    "type": "mini-app",
+    "stack": "HTML, CSS, JS",
+    "images": [
+      "./img/todo.jpg",
+      "./img/todo1.jpg",
+      "./img/todo2.jpg"
+    ],
+    "rootLink": "https://github.com/DanilMaiorov/toDoList",
+    "showLink": "https://danilmaiorov.github.io/toDoList/"
+  },
+  {
+    "id": 13,
+    "title": "Коврики Evarugs",
+    "date": "11/02/2022",
+    "description": "Одностраничный сайт продажи автомобильных ковриков. Практический проект. Осуществлена верстка и стилизация страницы. В данном проекте реализован скрипт ткрытиz/закрытие модального окна формы, а также подключен SwiperJs.",
+    "type": "landing-page",
+    "stack": "HTML, CSS, JS, SWIPERJS",
+    "images": [
+      "./img/evarugs.jpg",
+      "./img/evarugs1.jpg",
+      "./img/evarugs2.jpg"
+    ],
+    "rootLink": "https://github.com/DanilMaiorov/EVARUGS__Study",
+    "showLink": "https://danilmaiorov.github.io/EVARUGS__Study/"
+  },
+  {
+    "id": 14,
+    "title": "iPhone13 Promo",
+    "date": "26/05/2022",
+    "description": "Одностраничный промо-сайт iPhone13. Практический проект. Осуществлена адаптивная верстка и стилизация страницы. В данном проекте реализован скрипт аккоредеона с закрытием предыдущего окна. Реализованы табы карточек товаров. Открытие/закрытие модального окна формы по клику на кнопку Доставки. Реализована отправка формы с оповещением пользователя о результате. Также написана логика отображения списка товаров по клику на кнопку 'Показать еще' и ее скрытие, когда список товаров подошел к концу",
+    "type": "landing-page",
+    "stack": "HTML, CSS, JS, FETCH",
+    "images": [
+      "./img/iphone.jpg",
+      "./img/iphone1.jpg",
+      "./img/iphone2.jpg"
+    ],
+    "rootLink": "https://github.com/DanilMaiorov/iPhone13_promo_JS__Study",
+    "showLink": "https://danilmaiorov.github.io/iPhone13_promo_JS__Study/"
+  },
+  {
+    "id": 15,
+    "title": "Sup FANATIC",
+    "date": "08/08/2022",
+    "description": "Одностраничный промо-сайт плавательных сапов. Практический проект. Осуществлена адаптивная верстка и стилизация страницы.",
+    "type": "landing-page",
+    "stack": "HTML, CSS(FLEXBOX/GRID)",
+    "images": [
+      "./img/sup.jpg",
+      "./img/sup1.jpg",
+      "./img/sup2.jpg"
+    ],
+    "rootLink": "https://github.com/DanilMaiorov/sup_HTML-CSS",
+    "showLink": "https://danilmaiorov.github.io/sup_HTML-CSS/"
   }
 ]

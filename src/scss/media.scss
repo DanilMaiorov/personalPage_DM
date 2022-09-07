@@ -429,6 +429,9 @@
     padding: 0;
     margin-bottom: 2rem;
   }
+  .portfolio__cards-info-buttons {
+    padding-top: 1rem;
+  }
 }
 @media(max-width: 475px) {
   .portfolio__cards {
@@ -531,5 +534,8 @@
   }
   .modal__close:hover {
     transform: rotate(180deg);
+  }
+  .portfolio__cards-info-buttons-item:hover {
+    background-color: #183636;
   }
 }

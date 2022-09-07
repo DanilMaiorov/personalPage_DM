@@ -15,7 +15,7 @@ const renderPortfolio = () => {
   let renderArray = [];
 
   class PortfolioCard {
-    constructor(id, title, date, description, stack, type, images = [], parentSelector) {
+    constructor(id, title, date, description, stack, type, images = [], rootLink, showLink, parentSelector) {
       this.id = id;
       this.title = title;
       this.date = date;
@@ -23,6 +23,8 @@ const renderPortfolio = () => {
       this.stack = stack;
       this.images = images;
       this.type = type;
+      this.rootLink = rootLink;
+      this.showLink = showLink;
       this.parent = document.querySelector(parentSelector);
     }
     renderMainCard() {
@@ -34,8 +36,10 @@ const renderPortfolio = () => {
     <div class="portfolio__cards-image">
       <img src="${this.images[0]}" alt="portfolio-site-1">
     </div>
-    <div class="portfolio__cards-title">${this.title}</div>
-    <div class="portfolio__cards-date">${this.date}</div>
+    <div class="portfolio__cards-descr">
+      <div class="portfolio__cards-title">${this.title}</div>
+      <div class="portfolio__cards-date">${this.date}</div>
+    </div>
     `;
       this.parent.append(card);
       setTimeout(() => {
@@ -66,8 +70,8 @@ const renderPortfolio = () => {
           <div class="portfolio__cards-info-date"> ${this.date} </div>
           <div class="portfolio__cards-info-images"></div>
           <div class="portfolio__cards-info-buttons">
-            <button class="button portfolio__cards-info-buttons-item">Посмотреть</button>
-            <button class="button portfolio__cards-info-buttons-item">Перейти на GitHub</button>
+            <a class="button portfolio__cards-info-buttons-item" href="${this.showLink}" target="_blank">Посмотреть</a>
+            <a class="button portfolio__cards-info-buttons-item" href="${this.rootLink}" target="_blank">Перейти на GitHub</a>
           </div>
           <div class="portfolio__cards-info-close"></div>
       </div>
@@ -105,9 +109,11 @@ const renderPortfolio = () => {
         description,
         stack,
         type,
-        images
+        images,
+        rootLink,
+        showLink
       }) => {
-        let newCard = new PortfolioCard(id, title, date, description, stack, type, images, '.portfolio__cards');
+        let newCard = new PortfolioCard(id, title, date, description, stack, type, images, rootLink, showLink, '.portfolio__cards');
         newCard.renderMainCard();
         for (let key in newCard) {
           if (newCard[key] === 'landing-page') {

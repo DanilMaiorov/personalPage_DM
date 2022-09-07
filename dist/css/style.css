@@ -18,9 +18,6 @@ body {
   height: 100%;
 }
 
-/* body.lock {
-  overflow: hidden;
-} */
 main {
   flex: 1;
   padding-top: 7rem;
@@ -260,17 +257,24 @@ img {
   transition: all 0.4s ease;
 }
 
+.hello__button a {
+  font-size: 3.6rem;
+  font-family: "Nunito", sans-serif;
+  padding: 0.25em 1em;
+  border-radius: 0.1em;
+  background-color: #619b9b;
+  color: #fff;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
 .portfolio {
   background-color: rgba(97, 155, 155, 0.2);
 }
 
 .portfolio__inner {
   padding: 8rem 0 6rem 0;
-}
-
-.portfolio__content {
-  /*   display: flex;
-    flex-direction: column; */
 }
 
 .portfolio__list {
@@ -300,6 +304,9 @@ img {
   margin-bottom: 2.625%;
   margin-right: 2.625%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .portfolio__cards-item:nth-child(4n) {
@@ -394,19 +401,39 @@ img {
 }
 
 .portfolio__cards-info-images {
-  outline: 2px solid green;
   margin-bottom: 1.5rem;
 }
 
+.portfolio__cards-info-images img:last-child {
+  max-height: 55rem;
+}
+
 .portfolio__cards-info-images img {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   width: 100%;
   height: auto;
   max-height: 40rem;
   margin-bottom: 1.5rem;
 }
 
+.portfolio__cards-info-buttons {
+  padding-top: 2rem;
+}
+
 .portfolio__cards-info-buttons-item {
   font-size: 2.2rem;
+}
+
+.portfolio__cards-info-buttons-item {
+  font-size: 2rem;
+  font-family: "Nunito", sans-serif;
+  padding: 0.25em 1em;
+  border-radius: 0.1em;
+  background-color: #619b9b;
+  color: #fff;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  cursor: pointer;
 }
 
 .portfolio__cards-info-buttons-item:last-child {
@@ -1485,6 +1512,9 @@ img {
     padding: 0;
     margin-bottom: 2rem;
   }
+  .portfolio__cards-info-buttons {
+    padding-top: 1rem;
+  }
 }
 @media (max-width: 475px) {
   .portfolio__cards {
@@ -1586,5 +1616,8 @@ img {
   }
   .modal__close:hover {
     transform: rotate(180deg);
+  }
+  .portfolio__cards-info-buttons-item:hover {
+    background-color: #183636;
   }
 }

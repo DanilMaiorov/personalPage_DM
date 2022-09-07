@@ -11,9 +11,6 @@ body {
   font-weight: 400;
   height: 100%;
 }
-/* body.lock {
-  overflow: hidden;
-} */
 main {
   flex: 1;
   padding-top: 7rem;
@@ -38,7 +35,6 @@ button {
 }
 /*Ограничивающий контейнер*/
 .wrapper {
-  //max-width: 180rem;
   display: flex;
   flex-direction: column;
   min-height: 100%;
