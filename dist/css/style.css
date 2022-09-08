@@ -1558,6 +1558,9 @@ img {
   .modal__window img {
     width: 12rem;
   }
+  .hello__image {
+    padding-bottom: 2rem;
+  }
 }
 @media (max-width: 375px) {
   .logo {
