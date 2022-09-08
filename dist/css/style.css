@@ -1626,4 +1626,7 @@ img {
   .portfolio__cards-info-buttons-item:hover {
     background-color: #183636;
   }
+  .hello__button a:hover {
+    background-color: #183636;
+  }
 }
