@@ -234,6 +234,9 @@
   .modal__window {
     width: 50rem;
   }
+  .portfolio__cards-info-title {
+    padding-right: 2rem;
+  }
 }
 @media(max-width: 650px) {
   .hello__title,
@@ -358,6 +361,7 @@
   }
   .portfolio__cards-info-title {
     font-size: 3rem;
+    padding-right: 3rem;
   }
   .portfolio__cards-info-description,
   .portfolio__cards-info-stack,

@@ -11,6 +11,7 @@ const burger = () => {
 
   const linksHeader = header.querySelectorAll('.header__link');
 
+  seamless.polyfill();
   const burgerMenuOpen = () => {
     headerMenu.classList.toggle('active');
     burgerBtn.classList.toggle('active');
@@ -29,13 +30,30 @@ const burger = () => {
   linksHeader.forEach((item, index) => {
     item.addEventListener('click', (e) => {
       e.preventDefault();
-      if (item = e.target) {
+
+      let idAnchor = item.getAttribute('href').substring(1);
+
+      const section = document.getElementById(idAnchor);
+      if(section) {
+        section.scrollIntoView({
+          block: 'start',
+          behavior: 'smooth'
+        });
+      } else {
+        seamless.elementScrollIntoView(document.querySelector('#contacts'), {
+          behavior: 'smooth',
+          block: 'center',
+          inline: 'center',
+      })
+      }
+
+/*       if (item = e.target) {
         let idAnchor = item.getAttribute('href');
         document.querySelector(idAnchor).scrollIntoView({
           block: 'start',
           behavior: 'smooth'
         });
-      }
+      } */
       burgerMenuClose(headerMenu, burgerBtn);
     });
   });
