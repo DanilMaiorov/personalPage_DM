@@ -30,9 +30,7 @@ const burger = () => {
   linksHeader.forEach((item, index) => {
     item.addEventListener('click', (e) => {
       e.preventDefault();
-
       let idAnchor = item.getAttribute('href').substring(1);
-
       const section = document.getElementById(idAnchor);
       if(section) {
         section.scrollIntoView({
@@ -44,21 +42,12 @@ const burger = () => {
           behavior: 'smooth',
           block: 'center',
           inline: 'center',
-      })
+      });
       }
-
-/*       if (item = e.target) {
-        let idAnchor = item.getAttribute('href');
-        document.querySelector(idAnchor).scrollIntoView({
-          block: 'start',
-          behavior: 'smooth'
-        });
-      } */
       burgerMenuClose(headerMenu, burgerBtn);
     });
   });
   burgerBtn.addEventListener('click', burgerMenuOpen);
-
 };
 
 export default burger;
